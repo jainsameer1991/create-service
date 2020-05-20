@@ -6,15 +6,14 @@ import lombok.Data;
 
 @Data
 @Builder
-public class PropFilterableSortableData {
+public class PropFilterableSortableData
+{
     @JsonProperty("prop_id")
     private String propID;
     @JsonProperty("prop_name")
     private String propName;
     @JsonProperty("prop_price")
     private double propPrice;
-    @JsonProperty("budget_max")
-    private double budgetMax;
     @JsonProperty("bedroom")
     private String bedroom;
     @JsonProperty("sale_type")
@@ -23,19 +22,22 @@ public class PropFilterableSortableData {
     private String constructionStatus;
     @JsonProperty("area")
     private String area;
+    @JsonProperty("sqft")
+    private int sqft;
 
     public PropFilterableSortableData() {
 
     }
 
-    public PropFilterableSortableData(String propID, String propName, double propPrice, double budgetMax, String bedroom, String saleType, String constructionStatus, String area) {
+    public PropFilterableSortableData(String propID, String propName, double propPrice, String bedroom,
+                                      String saleType, String constructionStatus, String area, int sqft) {
         this.propID = propID;
         this.propName = propName;
         this.propPrice = propPrice;
-        this.budgetMax = budgetMax;
         this.bedroom = bedroom;
         this.saleType = saleType;
         this.constructionStatus = constructionStatus;
         this.area = area;
+        this.sqft = sqft;
     }
 }
